@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Reflection;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,11 @@ namespace lab2
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void fontSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            TBox.FontSize = fontSlider.Value;
         }
     }
 }

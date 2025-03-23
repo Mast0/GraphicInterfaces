@@ -31,19 +31,19 @@
             <StackPanel Orientation="Horizontal" Margin="5">
                 
                 <Button ToolTip="Відкрити">
-                    <Image Source="images/open.png" Width="50" Height="50" />
+                    <Image Source="D:\KPI\ГрафІнтерфейси\GraphicInterfaces\lab2\lab2\images\open.png" Width="50" Height="50" />
                 </Button>
 
                 <Button ToolTip="Стерти">
-                    <Image Source="images/clean.png" Width="50" Height="50" />
+                    <Image Source="D:\KPI\ГрафІнтерфейси\GraphicInterfaces\lab2\lab2\images\clean.png" Width="50" Height="50" />
                 </Button>
 
                 <Button ToolTip="Копіювати">
-                    <Image Source="images/copy.png" Width="50" Height="50" />
+                    <Image Source="D:\KPI\ГрафІнтерфейси\GraphicInterfaces\lab2\lab2\images\copy.png" Width="50" Height="50" />
                 </Button>
 
                 <Button ToolTip="Вставити">
-                    <Image Source="images/import.png" Width="50" Height="50" />
+                    <Image Source="D:\KPI\ГрафІнтерфейси\GraphicInterfaces\lab2\lab2\images\import.png" Width="50" Height="50" />
                 </Button>
             </StackPanel>
         </Border>
@@ -55,11 +55,13 @@
                     <RowDefinition Height="Auto"></RowDefinition>
                 </Grid.RowDefinitions>
                 
-                <TextBox Margin="20" Grid.Row="0" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap"/>
+                <TextBox x:Name="TBox" Margin="20" Grid.Row="0" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap"/>
 
                 <DockPanel Margin="10" Grid.Row="1">
+                    <Label Content="Розмір шрифту:" Width="120" FontSize="16" DockPanel.Dock="Left"/>
+                    <Slider Margin="4" MinWidth="100" Name="fontSlider" Maximum="100" Minimum="12" Width="130" DockPanel.Dock="Left" ValueChanged="fontSlider_ValueChanged"/>
                     <Button Style="{x:Null}" Content="Ok" DockPanel.Dock="Bottom" Width="24" Height="24"/>
-
+                    
                 </DockPanel>
             </Grid>
         </Border>
