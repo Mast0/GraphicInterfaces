@@ -6,7 +6,22 @@
         xmlns:local="clr-namespace:lab2"
         mc:Ignorable="d"
         Title="TextEditor" Height="450" Width="800">
-    <Grid>
+
+    <Window.Resources>
+        <LinearGradientBrush x:Key="LinearPanelBrush">
+            <GradientStop Color="Yellow" Offset="0"></GradientStop>
+            <GradientStop Color="Blue" Offset="0.5"></GradientStop>
+            <GradientStop Color="Yellow" Offset="0.8"></GradientStop>
+        </LinearGradientBrush>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="BorderBrush" Value="White"></Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource LinearPanelBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -43,7 +58,7 @@
                 <TextBox Margin="20" Grid.Row="0" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap"/>
 
                 <DockPanel Margin="10" Grid.Row="1">
-                    <Button Content="Ok" DockPanel.Dock="Bottom" Width="24" Height="24"/>
+                    <Button Style="{x:Null}" Content="Ok" DockPanel.Dock="Bottom" Width="24" Height="24"/>
 
                 </DockPanel>
             </Grid>
