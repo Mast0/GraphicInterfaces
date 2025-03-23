@@ -6,26 +6,10 @@
         xmlns:local="clr-namespace:lab2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <WrapPanel HorizontalAlignment="Stretch" VerticalAlignment="Center" Width="410" Margin="5">
-        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="Label"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="Label"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
-        <Button Content="Button" Margin="50"/>
-
-        </WrapPanel>
+    <DockPanel LastChildFill="False">
+        <Label DockPanel.Dock="Top" HorizontalContentAlignment="Center" Content="Label" Width="Auto"/>
+        <TextBox DockPanel.Dock="Left" TextWrapping="Wrap" Text="TextBox" Width="300"/>
+        <TextBox DockPanel.Dock="Right" TextWrapping="Wrap" Text="TextBox" Width="300"/>
+        <Button DockPanel.Dock="Bottom" Margin="20" Content="Button" Width="70" Height="20"/>
+    </DockPanel>
 </Window>
