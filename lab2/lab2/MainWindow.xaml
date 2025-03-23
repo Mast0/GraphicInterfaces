@@ -6,13 +6,26 @@
         xmlns:local="clr-namespace:lab2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <Label HorizontalAlignment="Center" Margin="20" Content="Label"/>
-        <TextBox HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="TextBox" />
-        <TextBox HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="TextBox" />
-        <TextBox HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="TextBox" />
-        <TextBox HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="TextBox" />
-        <Button HorizontalAlignment="Center" Margin="50" Width="300" Content="Button"/>
+    <WrapPanel HorizontalAlignment="Stretch" VerticalAlignment="Center" Width="410" Margin="5">
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="Label"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="Label"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <TextBox TextWrapping="Wrap" VerticalAlignment="Top" Text="TextBox"/>
+        <Button Content="Button" Margin="50"/>
 
-    </StackPanel>
+        </WrapPanel>
 </Window>
