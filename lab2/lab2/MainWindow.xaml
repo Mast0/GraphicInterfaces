@@ -28,21 +28,21 @@
         </Grid.RowDefinitions>
 
         <Border Grid.Row="0" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10">
-            <StackPanel Orientation="Horizontal" Margin="5">
+            <StackPanel Orientation="Horizontal" Margin="5" FocusManager.IsFocusScope="True">
                 
-                <Button ToolTip="Відкрити">
-                    <Image Source="D:\KPI\ГрафІнтерфейси\GraphicInterfaces\lab2\lab2\images\open.png" Width="50" Height="50" />
+                <Button ToolTip="Відкрити" Command="Open">
+                    <Image x:Name="OpenBt" Source="D:\KPI\ГрафІнтерфейси\GraphicInterfaces\lab2\lab2\images\open.png" Width="50" Height="50" />
                 </Button>
 
-                <Button ToolTip="Стерти">
-                    <Image Source="D:\KPI\ГрафІнтерфейси\GraphicInterfaces\lab2\lab2\images\clean.png" Width="50" Height="50" />
+                <Button ToolTip="Стерти" Command="Delete">
+                    <Image x:Name="ClearBt" Source="D:\KPI\ГрафІнтерфейси\GraphicInterfaces\lab2\lab2\images\clean.png" Width="50" Height="50" />
                 </Button>
 
-                <Button ToolTip="Копіювати">
-                    <Image Source="D:\KPI\ГрафІнтерфейси\GraphicInterfaces\lab2\lab2\images\copy.png" Width="50" Height="50" />
+                <Button ToolTip="Копіювати" Command="Copy">
+                    <Image x:Name="CopyBt" Source="D:\KPI\ГрафІнтерфейси\GraphicInterfaces\lab2\lab2\images\copy.png" Width="50" Height="50" />
                 </Button>
 
-                <Button ToolTip="Вставити">
+                <Button ToolTip="Вставити" Command="Paste">
                     <Image Source="D:\KPI\ГрафІнтерфейси\GraphicInterfaces\lab2\lab2\images\import.png" Width="50" Height="50" />
                 </Button>
             </StackPanel>
@@ -60,7 +60,7 @@
                 <DockPanel Margin="10" Grid.Row="1">
                     <Label Content="Розмір шрифту:" Width="120" FontSize="16" DockPanel.Dock="Left"/>
                     <Slider Margin="4" MinWidth="100" Name="fontSlider" Maximum="100" Minimum="12" Width="130" DockPanel.Dock="Left" ValueChanged="fontSlider_ValueChanged"/>
-                    <Button Style="{x:Null}" Content="Ok" DockPanel.Dock="Bottom" Width="24" Height="24"/>
+                    <Button x:Name="SaveBt" Style="{x:Null}" Content="Ok" DockPanel.Dock="Bottom" Width="24" Height="24" Command="Save" />
                     
                 </DockPanel>
             </Grid>
