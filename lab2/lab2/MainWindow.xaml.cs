@@ -18,7 +18,7 @@ namespace lab2
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly string v_SaveFolder = "D:\\KPI\\ГрафІнтерфейси\\GraphicInterfa\\lab2\\lab2\\text.txt";
+        private readonly string v_SaveFolder = "D:\\KPI\\ГрафІнтерфейси\\GraphicInterfaces\\lab2\\lab2\\text.txt";
 
         public MainWindow()
         {
@@ -64,7 +64,9 @@ namespace lab2
 
         private void canExecute_Open(object sender, CanExecuteRoutedEventArgs e)
         {
-            e.CanExecute = true;
+            if (File.Exists(v_SaveFolder))
+                e.CanExecute = true;
+            else e.CanExecute = false;
         }
 
         private void execute_Open(object sender, ExecutedRoutedEventArgs e)
