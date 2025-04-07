@@ -54,8 +54,8 @@
                     <RowDefinition></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                 </Grid.RowDefinitions>
-                
-                <TextBox x:Name="TBox" Margin="20" Grid.Row="0" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap"/>
+
+                <TextBox x:Name="TBox" Margin="20" SpellCheck.IsEnabled="True" Language="uk-UA" Grid.Row="0" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap"/>
 
                 <DockPanel Margin="10" Grid.Row="1">
                     <Label Content="Розмір шрифту:" Width="120" FontSize="16" DockPanel.Dock="Left"/>
