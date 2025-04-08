@@ -20,5 +20,23 @@ namespace lab3
         {
             InitializeComponent();
         }
+
+        private void ThemeToggle_Checked(object sender, RoutedEventArgs e)
+        {
+            ChangeTheme("Themes/DarkTheme.xaml");
+        }
+
+        private void ThemeToggle_Unchecked(object sender, RoutedEventArgs e)
+        {
+            ChangeTheme("Themes/LightTheme.xaml");
+        }
+
+        private void ChangeTheme(string themePath)
+        {
+            var dict = new ResourceDictionary() { Source = new System.Uri(themePath, System.UriKind.Relative) };
+
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(dict);
+        }
     }
 }
