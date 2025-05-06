@@ -28,6 +28,9 @@ namespace lab3
 
             FillNSystems();
             FillCBoxes();
+
+            var clickCOmmand = new CommandBinding(ApplicationCommands.NotACommand, Btn_Convert_Click, canBtn_Convert_Click);
+            CommandBindings.Add(clickCOmmand);
         }
 
         private void ThemeToggle_Checked(object sender, RoutedEventArgs e)
@@ -82,6 +85,15 @@ namespace lab3
             int decimalValue = Convert.ToInt32(TBox_Input.Text, from.Value);
 
             TBox_Output.Text = Convert.ToString(decimalValue, to.Value).ToUpper();
+        }
+
+        public void canBtn_Convert_Click(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TBox_Input.Text))
+            {
+                e.CanExecute = false;
+            }
+            else e.CanExecute = true;
         }
 
         private void CBox_Validate(object sender, SelectionChangedEventArgs e)

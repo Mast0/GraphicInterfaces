@@ -99,12 +99,12 @@
 
             <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <GroupBox Header="From" Margin="0,0,0,15" Width="100">
-                    <ComboBox x:Name="CBox_From" Height="20" BorderBrush="#FFACACAC" SelectionChanged="CBox_Validate"/>
+                    <ComboBox x:Name="CBox_From" Height="20" BorderBrush="#FFACACAC" SelectionChanged="CBox_Validate" SelectedIndex="0"/>
                 </GroupBox>
                 <GroupBox Header="To" Margin="0,0,0,15" Width="100">
-                    <ComboBox x:Name="CBox_To" Height="20" SelectionChanged="CBox_Validate"></ComboBox>
+                    <ComboBox x:Name="CBox_To" Height="20" SelectionChanged="CBox_Validate" SelectedIndex="1"></ComboBox>
                 </GroupBox>
-                <Button x:Name="Btn_Convert" Content="Convert" Width="100" Click="Btn_Convert_Click"></Button>
+                <Button x:Name="Btn_Convert" Content="Convert" Width="100" Click="Btn_Convert_Click" Command="NotACommand"></Button>
             </StackPanel>
         </Grid>
 
