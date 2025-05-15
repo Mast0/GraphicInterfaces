@@ -108,6 +108,21 @@
             </StackPanel>
         </Grid>
 
-        <TextBox x:Name="TBox_Output" Grid.Row="2" TextWrapping="Wrap" Margin="5" IsEnabled="False"></TextBox>
+        <Grid Grid.Row="2" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            
+            <TextBox x:Name="TBox_Output" Grid.Column="0" TextWrapping="Wrap" Margin="5" IsEnabled="False"></TextBox>
+            <DataGrid x:Name="HistoryData"
+                Grid.Column="1"
+                Background="White"
+                AutoGenerateColumns="True"
+                IsReadOnly="True"
+                GridLinesVisibility="Vertical"
+                AlternatingRowBackground="#f0f0f0"/>
+        </Grid>
     </Grid>
 </Window>
